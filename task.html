@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script type="text/javascript" src="task.js"></script>
+ 
+<style type="text/css">
+
+body{
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.grid_column {
+	width: 275px;
+
+	margin: 10px;
+	padding: 10px;
+
+	min-height: 1024px;
+
+	float: left;
+	border: 1px solid #CCC;
+}
+
+ul.droppable {
+	list-style-type: none;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+
+	min-height: 1000px;
+}
+
+
+ul.droppable li {
+	margin: 15px 0px;
+	padding: 10px;
+	background: #FFC;
+
+	min-height: 200px;
+	position: relative;
+}
+
+.valid {
+	background: #009966;
+}
+
+.invalid {
+	background: #FF3333;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div id="container">
+		<div class="grid_row">
+			<h1>
+				TaskManager
+			</h1>
+
+			<form id="frmAdd" name="frmAdd" id="frmAdd">
+				<p>
+					<label for="TaskDescription">Add a new Task</label>
+						<input type="text" name="TaskDescription" id="TaskDescription" />
+						<a href="javascript:;" id="btnAdd">Add</a>
+				</p>
+			</form>
+		</div>
+		<div class="grid_row">
+			<div class="grid_column">
+				<h2>Blacklog. (<span id="count_B">0</span>)</h2>
+				<ul id="B" class="droppable"></ul>
+
+			</div>
+			<div class="grid_column">
+				<h2>In-Progress. (<span id="count_I">0</span>)</h2>
+				<ul id="I" class="droppable"></ul>
+			</div>
+			<div class="grid_column">
+				<h2>Done. (<span id="count_D">0</span>)</h2>
+				<ul id="D" class="droppable"></ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
